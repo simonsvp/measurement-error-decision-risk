@@ -1,23 +1,23 @@
 # measurement-error-decision-risk
-Simulation study of measurement system variation and decision risk in pass/fail testing (GRR-inspired Monte Carlo analysis).
+Simulation study of measurement system variation and decision risk in Pass/Fail testing (GR&R-inspired Monte Carlo analysis).
 
 ## Project Overview
 
-This project investigates how measurement system variation influences decision risk in pass/fail testing environments.
+This project investigates how measurement system variation influences decision risk in Pass/Fail testing environments.
 
-In many industrial applications (e.g., pressure tests, tensile tests, leakage tests), decisions are made based on measured values compared to a specification limit. However, measurement systems introduce variation, which may lead to:
+In many industrial applications (e.g., pressure retention tests, tensile tests, and leakage tests), decisions are made based on measured values compared with a specification limit. However, measurement systems always introduce some level of variation, which may lead to incorrect decisions such as:
 
-- False Pass (Type II decision error)
-- False Fail (Type I decision error)
+- **False Pass** (Type II decision error)  
+- **False Fail** (Type I decision error)
 
-This project simulates such scenarios and evaluates the probability of incorrect decisions under different measurement system characteristics.
+This project simulates such testing scenarios and evaluates the probability of incorrect decisions under different levels of measurement system variation.
 
 ---
 
 ## Objectives
 
 - Model true product variation
-- Model measurement system variation (GRR-inspired)
+- Model measurement system variation (GR&R, MSA, Cpk)
 - Simulate repeated measurements
 - Quantify decision errors:
   - False Pass Rate
@@ -55,7 +55,7 @@ Decision risk is estimated via Monte Carlo simulation.
 
 1. Generate synthetic product population
 2. Add measurement system noise
-3. Apply pass/fail decision rule
+3. Apply Pass/Fail decision rule
 4. Compare decision vs true condition
 5. Estimate error probabilities
 
@@ -78,65 +78,6 @@ Decision risk is estimated via Monte Carlo simulation.
 - Pandas
 - Matplotlib
 - Jupyter Notebook
-
----
-
-## Repository Structure
-
-```
-measurement-error-decision-risk/
-│
-├── README.md
-├── requirements.txt
-├── notebook/
-│   └── measurement_error_analysis.ipynb
-├── src/
-│   ├── simulation.py
-│   ├── decision.py
-│   └── utils.py
-├── figures/
-└── data/
-```
-
----
-
-## How to Run
-
-1. Clone the repository:
-
-```
-git clone https://github.com/YOUR_USERNAME/measurement-error-decision-risk.git
-```
-
-2. Create virtual environment:
-
-```
-python -m venv venv
-```
-
-3. Activate it:
-
-Windows:
-```
-venv\Scripts\activate
-```
-
-Mac/Linux:
-```
-source venv/bin/activate
-```
-
-4. Install dependencies:
-
-```
-pip install -r requirements.txt
-```
-
-5. Run Jupyter Notebook:
-
-```
-jupyter notebook
-```
 
 ---
 
